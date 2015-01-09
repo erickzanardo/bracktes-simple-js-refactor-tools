@@ -1,0 +1,13 @@
+{
+    "name": "Simple Javascrit Refactor Tools",
+    "title": "Simple Javascrit Refactor Tools",
+    "description": "Collection of simple tools for executing refactor operations on your JavaScript code",
+    "homepage": "https://github.com/erickzanardo/bracktes-simple-js-refactor-tools",
+    "version": "1.0.0",
+    "author": "Erick Zanardo <erickzanardoo@gmail.com>",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.24.0"
+    },
+    "i18n": [ "en"]
+}
