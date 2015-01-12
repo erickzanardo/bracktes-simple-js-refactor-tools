@@ -29,6 +29,8 @@ define(function (require, exports, module) {
                 var code = ['var', value, '=', selectedText].join(' ');
                 var doc = DocumentManager.getCurrentDocument();
                 doc.replaceRange(code, selection.start, selection.end);
+                editor.setCursorPos({line: selection.start.line, ch: selection.start.ch + code.length});
+                editor.focus();
             });
         } else {
             Dialogs.showModalDialog(DefaultDialogs.DIALOG_ID_ERROR, 'Extract to variable', 'No text selected');
@@ -44,10 +46,9 @@ define(function (require, exports, module) {
                 var code = ['for (var', value, '= 0', ';', value, '<', selectedText + '.length', ';', value + '++)', '{}'].join(' ');
                 var doc = DocumentManager.getCurrentDocument();
                 doc.replaceRange(code, selection.start, selection.end);
-                /*
                 var pos = selection.start.ch + code.length - 1;
                 editor.setCursorPos({line: selection.start.line, ch: pos});
-                */
+                editor.focus();
             });
         } else {
             Dialogs.showModalDialog(DefaultDialogs.DIALOG_ID_ERROR, 'Iterate over variable', 'No text selected');
