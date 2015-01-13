@@ -8,5 +8,4 @@ This extensions contains the following features and are accessible through the e
 
 - Extract expression to a variable (Ctrl+1)
 - Iterate over variable (Ctrl+2)
-
-
+- Create function (Ctrl+3)
